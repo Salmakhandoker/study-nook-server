@@ -36,7 +36,7 @@ router.post('/register', async (req, res) => {
 
     let hashedPassword = '';
     if (password) {
-      // Password validation: min 6 chars, 1 uppercase, 1 lowercase (also done on frontend, but good to have here)
+      // Password validation: min 6 chars, 1 uppercase, 1 lowercase ,
       const passRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
       if (!passRegex.test(password)) {
         return res.status(400).json({ message: 'Password must be at least 6 characters with uppercase and lowercase letters' });

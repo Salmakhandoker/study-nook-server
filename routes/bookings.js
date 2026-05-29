@@ -34,7 +34,7 @@ router.post('/', authMiddleware, async (req, res) => {
 
     // CONFLICT CHECK (Challenge 7.3 & Core requirement)
     // Find any booking for this room on this date that is NOT cancelled
-    // and where time overlaps. Overlap condition:
+    
     
     const conflictQuery = {
       roomId: roomId,
